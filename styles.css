@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* general styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffdf6; /* soft cream */
+  color: #333;
+}
+
+/* top section */
+.top-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  background-color: #fcebe4;
+  border-bottom: 2px solid #f5d3cc;
+}
+
+/* headings */
+h2, h3 {
+  color: #4a2c2a; /* rich brown */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* progress bar */
+.progress-bar-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 10px;
+  background-color: #d88282;
+  transition: width 0.4s ease-in-out;
+  z-index: 9999;
+}
+
+/* dropdown */
+#breedSelect {
+  max-width: 300px;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+/* buttons */
+button {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #d88282;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #c06767;
+  transform: scale(1.05);
+}
+
+/* heart button */
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 99;
+  width: 30px;
+  height: 30px;
+  color: #d88282;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.favorite-button:hover {
+  color: #e63946;
+  transform: scale(1.2);
+}
+
+/* carousel */
+.carousel-inner {
+  padding: 1em;
+  background-color: #fffefb;
+  border-radius: 12px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #f5c6aa;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: background-color 0.2s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #e1a87e;
+}
+
+/* responsive carousel */
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.3333%;
+    display: block;
+  }
+
+  .carousel-inner {
+    display: flex;
+  }
+}
+
+/* image wrapper */
+.card .img-wrapper {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  background-color: #fff;
+}
+
+.card img {
+  max-height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 200px;
+  }
+}
+
+/* info section */
+#infoDump {
+  background-color: #fef6f2;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #4a2c2a;
+  border: 1px solid #fddbcf;
+  transition: all 0.3s ease-in-out;
+}
